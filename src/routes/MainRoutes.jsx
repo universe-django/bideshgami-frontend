@@ -29,7 +29,7 @@ import LoginPage from "@/pages/LoginPage";
 export const MainRoutes = (
   <>
     <Route path="/" element={<MainLaouts />}>
-      <Route index element={<HomePage />} />
+      <Route index element={<HomePage />} /> 
       <Route path="/user" element={<UserPage />} />
       <Route path="/user/register" element={<UserRegister />} />
       <Route path="/agency/register" element={<AgencyRegisterPage />} />
