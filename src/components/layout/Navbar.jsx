@@ -86,11 +86,11 @@ export default function Navbar() {
               {/* Optimized Button Logic */}
               <Link
                 to={user ? (user.role === "customer" ? "/customer/dashboard" : "/dashboard") : "/login"}
-                className="rounded-md px-6 py-2 transition-all duration-200 bg-white text-primary hover:bg-white/90 font-bold tracking-tight uppercase"
+                className="rounded-md px-6 py-2 transition-all duration-200 bg-white text-primary hover:bg-white/90 font-bold tracking-tight"
               >
                 {user ? "Dashboard" : "Sign in"}
               </Link>
-              
+
             </div>
 
             <div className="flex lg:hidden items-center space-x-4">

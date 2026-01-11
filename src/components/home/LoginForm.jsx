@@ -101,13 +101,20 @@ export default function LoginForm() {
         </Link>
       </div>
 
-      <Button
+      {/* <Button
         type="submit"
         disabled={loading}
         className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition-all duration-300"
       >
         {loading ? "Loading..." : "Login"}
-      </Button>
+      </Button> */}
+
+      <Link
+        to="/customer/dashboard"
+        className="bg-blue-600 text-center hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition-all duration-300"
+      >
+        Demo Login
+      </Link>
 
 
       <div className="text-sm text-center text-gray-600 space-y-3">
