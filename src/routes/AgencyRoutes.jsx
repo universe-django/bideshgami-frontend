@@ -30,17 +30,19 @@ import AgencyAdvancePaymentPage from "@/pages/agency-page/AgencyAdvancePaymentPa
 import AgencyAfterFlightPaymentPage from "@/pages/agency-page/AgencyAfterFlightPaymentPage";
 import AgencyBeforFlightPayment from "@/pages/agency-page/AgencyBeforFlightPayment";
 import AgencyOnTheWayPage from "@/pages/agency-page/AgencyOnTheWaypage";
-import AgencyReadyForFlight2Page from "@/pages/agency-page/AgencyReadyForFlight2Page";
-import AgencyRequestPassportPage from "@/pages/agency-page/AgencyRequestPassportPage";
-import AgencyFailedVisaPage from "@/pages/agency-page/AgencyFailedVisaPage";
-import ProtectedRoute from "./ProtectedRoute";
+// import AgencyReadyForFlight2Page from "@/pages/agency-page/AgencyReadyForFlight2Page";
+// import AgencyRequestPassportPage from "@/pages/agency-page/AgencyRequestPassportPage";
+// import AgencyFailedVisaPage from "@/pages/agency-page/AgencyFailedVisaPage";
+// import ProtectedRoute from "./ProtectedRoute";
 import StudentConsultencyPage from "@/pages/agency-page/StudentConsultencyPage";
 import AgencyCreateAdsPage from "@/pages/agency-page/AgencyCreateAdsPage";
 import AdsDetailsPage from "@/pages/agency-page/AdsDetailsPage";
 import AgencyEditAdPage from "@/pages/agency-page/AgencyEditAdPage";
 //element={<AgencyProtectedRoute allowedRoles={["agency"]} />}
 export const AgencyRoutes = (
-  <Route element={<ProtectedRoute allowedRoles={["agency"]} />}>
+  // <Route element={<ProtectedRoute allowedRoles={["agency"]} />}>
+  // </Route>
+
     <Route path="agency" element={<AgencyDashboadLayout />}>
       <Route index element={<AgencyDashboardPage />} />
       <Route path="profile" element={<AgencyProfilePage />} />
@@ -90,5 +92,4 @@ export const AgencyRoutes = (
         element={<StudentConsultencyPage />}
       />
     </Route>
-  </Route>
 );

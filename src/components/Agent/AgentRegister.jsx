@@ -364,13 +364,20 @@ const AgentRegister = () => {
 
                     {/* Submit Button  */}
                     <div className="mt-6 text-center">
-                        <button
+                        {/* <button
                             type="submit"
                             disabled={isSubmitting}
                             className="w-40 bg-primary text-white py-2 rounded-md hover:bg-blue-700 font-medium disabled:opacity-70"
                         >
                             {isSubmitting ? 'Creating...' : 'Create'}
-                        </button>
+                        </button> */}
+
+                        <Link
+                            to="/agent/dashboard"
+                            className="rounded-md px-6 py-2 text-white  duration-300 bg-primary  transition-colors hover:bg-primary/90 font-bold tracking-tight"
+                            >
+                            Create
+                        </Link>
                     </div>
                 </form>
             </div>

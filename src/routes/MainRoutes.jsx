@@ -23,7 +23,7 @@ import UserPage from "@/pages/UserPage";
 import VisaApplyPage from "@/pages/VisaApplyPage";
 import VisaDetailsPage from "@/pages/VisaPage";
 import { Navigate, Route } from "react-router";
-import ProtectedRoute from "./ProtectedRoute";
+// import ProtectedRoute from "./ProtectedRoute";
 import LoginPage from "@/pages/LoginPage";
 
 export const MainRoutes = (

@@ -38,9 +38,12 @@ export default function Sidebar({ open, setOpen, onLinkClick, profile }) {
   //console.log("Profile in Sidebar:", profile?.profile?.agencyType);
   const agencyType = profile?.profile?.agencyType;
 
-  const filterdMenuTree = menuTree.filter((item) => {
-    return item.roles.includes(agencyType);
-  });
+  // const filterdMenuTree = menuTree.filter((item) => {
+  //   return item.roles.includes(agencyType);
+  // });
+
+  const filterdMenuTree = menuTree; // This ignores the 'roles' check and shows everything
+  
   const renderMenuItems = (items, level = 0) => {
     return items.map((item) => (
       <li key={item.id}>
@@ -93,7 +96,6 @@ export default function Sidebar({ open, setOpen, onLinkClick, profile }) {
 
   return (
     <>
-      {profile && (
         <aside
           className={cn(
             "fixed z-50 h-screen bg-white transition-all duration-700 ease-linear flex flex-col ",
@@ -122,7 +124,6 @@ export default function Sidebar({ open, setOpen, onLinkClick, profile }) {
             <ul className="space-y-2">{renderMenuItems(filterdMenuTree)}</ul>
           </nav>
         </aside>
-      )}
     </>
   );
 }

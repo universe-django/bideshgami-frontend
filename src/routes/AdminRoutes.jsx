@@ -87,7 +87,9 @@ import StudentConCancelledListPage from "@/pages/super-admin-page/Student-Consul
 import ProtectedRoute from "./ProtectedRoute";
 
 export const AdminRoutes = (
-  <Route element={<ProtectedRoute allowedRoles={["admin"]} />}>
+  // <Route element={<ProtectedRoute allowedRoles={["admin"]} />}>
+  // </Route>
+  
     <Route path="admin" element={<SuperDashboardLaout />}>
       <Route index element={<SuperAdminDashboardPage />} />
       <Route path="customer-list" element={<CustomerListPage />} />
@@ -288,5 +290,5 @@ export const AdminRoutes = (
         element={<VoucherListCOVPage />}
       />
     </Route>
-  </Route>
+  
 );

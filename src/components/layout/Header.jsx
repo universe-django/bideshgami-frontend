@@ -15,7 +15,14 @@ export default function Header() {
               to="/agency/register"
               className="rounded-md px-6 py-2 text-white  duration-300 bg-primary  transition-colors hover:bg-primary/90 font-bold tracking-tight"
             >
-              Become a Agency
+              Become an Agency
+            </Link>
+
+            <Link
+              to="/agent/register"
+              className="rounded-md px-6 py-2 text-white  duration-300 bg-primary  transition-colors hover:bg-primary/90 font-bold tracking-tight"
+            >
+              Become an Agent
             </Link>
           </div>
         </div>

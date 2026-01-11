@@ -22,9 +22,10 @@ import AgentChangePasswordPage from "@/pages/Agent-Pages/AgentChangePasswordPage
 import AgentFaqPage from "@/pages/Agent-Pages/AgentFaqPage";
 import AdsVisaDetailsPage from "@/pages/Agent-Pages/AdsVisaDetailsPage";
 import HajjVisaPage from "@/pages/Agent-Pages/HajjVisaPage";
-import ProtectedRoute from "./ProtectedRoute";
+// import ProtectedRoute from "./ProtectedRoute";
 export const AgentRoutes = (
-  <Route element={<ProtectedRoute allowedRoles={["agent"]} />}>
+  // <Route element={<ProtectedRoute allowedRoles={["agent"]} />}>
+  // </Route>
     <Route path="/agent/dashboard" element={<AgentDashboardLayout />}>
       <Route index element={<AgentDashboardPage />} />
       <Route path="/agent/dashboard/profile" element={<AgentProfilePage />} />
@@ -96,5 +97,4 @@ export const AgentRoutes = (
       />
       <Route path="/agent/dashboard/terms" element={<AgentFaqPage />} />
     </Route>
-  </Route>
 );

@@ -113,7 +113,7 @@ export default function LoginForm() {
         to="/customer/dashboard"
         className="bg-blue-600 text-center hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition-all duration-300"
       >
-        Demo Login
+        Login
       </Link>
 
 
