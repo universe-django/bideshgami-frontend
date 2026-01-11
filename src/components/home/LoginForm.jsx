@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { Mail, Lock, Eye, EyeOff } from "lucide-react";
 import { Button } from "../ui/button";
-import { Link } from "react-router";
+
+// import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
+
 import { useDispatch, useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
@@ -10,6 +13,8 @@ import { useEffect } from "react";
 export default function LoginForm() {
   const [showPassword, setShowPassword] = useState(false);
   const dispatch = useDispatch();
+  const navigate = useNavigate(); // ✅ ADD THIS
+
 
   const { loading, error } = useSelector((state) => state.userAuth);
 
@@ -19,9 +24,34 @@ export default function LoginForm() {
     formState: { errors },
   } = useForm();
 
+  // const onSubmit = (data) => {
+  //   dispatch(loginUsers({ email: data.email, password: data.password }));
+  // };
+
+  const DEMO_MODE = import.meta.env.VITE_DEMO_MODE === "true";
+
   const onSubmit = (data) => {
-    dispatch(loginUsers({ email: data.email, password: data.password }));
+    if (DEMO_MODE) {
+      // ✅ DEMO LOGIN (no backend)
+      const demoUser = {
+        id: 1,
+        name: "Demo User",
+        email: data.email,
+        role: "customer",
+      };
+
+      localStorage.setItem("demoUser", JSON.stringify(demoUser));
+
+      toast.success("Login successful");
+
+      // ✅ THIS IS THE REDIRECT YOU WERE MISSING
+      navigate("/customer/dashboard", { replace: true });
+    } else {
+      // ✅ REAL LOGIN (localhost backend)
+      dispatch(loginUsers({ email: data.email, password: data.password }));
+    }
   };
+
 
   useEffect(() => {
     if (error) {

@@ -3,7 +3,7 @@ import Simplifyingskills from "../assets/Simplifyingskills.png";
 import LoginForm from "./home/LoginForm";
 
 export default function LoginUser() {
-  useAuthRedirect();
+  // useAuthRedirect();
   return (
     <section className="md:flex gap-5 px-5 max-w-6xl mx-auto">
       <div className="flex flex-1 items-center">

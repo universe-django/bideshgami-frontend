@@ -44,7 +44,8 @@ export const MainRoutes = (
       <Route path="visa-details/:id" element={<VisaDetailsPage />} />
       <Route path="apply" element={<VisaApplyPage />} />
 
-      <Route element={<ProtectedRoute allowedRoles={["customer"]} />}>
+      {/* <Route element={<ProtectedRoute allowedRoles={["customer"]} />}>
+      </Route> */}
         <Route path="customer" element={<CustomerLayout />}>
           <Route index element={<Navigate to="dashboard" replace />} />
           <Route path="dashboard" element={<DashboardPage />} />
@@ -58,7 +59,6 @@ export const MainRoutes = (
           <Route path="change-password" element={<ChangePasswordPage />} />
           <Route path="payment" element={<PaymentPage />} />
         </Route>
-      </Route>
     </Route>
   </>
 );
